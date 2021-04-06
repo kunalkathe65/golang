@@ -4,6 +4,7 @@ import "fmt"
 
 type deck []string
 
+//Creates and returns a new Deck
 func newDeck() deck{
 	cards := deck{}
 	cardSuites := []string{"Spades","Diamonds","Hearts","Clubs"}
@@ -15,6 +16,11 @@ func newDeck() deck{
 		}
 	}
 	return cards
+}
+
+//Creates and return d deal
+func deal(d deck, handSize int) (deck,deck){
+	return d[:handSize], d[handSize:]
 }
 
 //Receiver functions
